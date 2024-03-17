@@ -1,3 +1,5 @@
+scoreboard players set commonDropsTimer commonDropsTimer 0
+
 #rock spawns
 summon minecraft:item 32 -29 32 {Item:{id:"cobblestone",Count:1b,tag:{Rock:1b,display:{Name:"\"Rock\""}}}}
 summon minecraft:item 32 -29 -32 {Item:{id:"cobblestone",Count:1b,tag:{Rock:1b,display:{Name:"\"Rock\""}}}}

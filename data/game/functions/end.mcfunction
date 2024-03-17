@@ -10,7 +10,14 @@ tp @a 0 1 0
 spawnpoint @a 0 1 0
 clear @a
 effect clear @a
+kill @e[type=item]
 
 scoreboard objectives remove playerHealth
+scoreboard objectives remove deaths
+
+scoreboard objectives remove commonDropsTimer
+scoreboard objectives remove uncommonDropsTimer
+scoreboard objectives remove rareDropsTimer
+setblock 0 13 0 air
 
 title @a title ["",{"text":"Game has ended","color":"dark_red"}]

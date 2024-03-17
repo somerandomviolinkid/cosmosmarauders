@@ -1,6 +1,9 @@
-item replace entity @s armor.chest with minecraft:chainmail_chestplate{Unbreakable:1}
-item replace entity @s armor.legs with minecraft:chainmail_leggings{Unbreakable:1}
-item replace entity @s armor.feet with minecraft:chainmail_boots{Unbreakable:1}
+scoreboard players set @a deaths 0
 
-effect give @s minecraft:slow_falling infinite 1
-effect give @s minecraft:jump_boost infinite 3
+function game:updates/updateredteam
+function game:updates/updateblueteam
+function game:updates/updategreenteam
+function game:updates/updateyellowteam
+
+effect give @a minecraft:slow_falling infinite 1
+effect give @a minecraft:jump_boost infinite 3

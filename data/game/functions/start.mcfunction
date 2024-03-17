@@ -1,6 +1,7 @@
 gamemode adventure @a
 effect give @a minecraft:saturation 1 255
 effect give @a minecraft:regeneration 1 255
+kill @e[type=item]
 
 #initialize teams
 team add redTeam "Red Team"
@@ -106,7 +107,13 @@ function game:updates/updateyellowteam
 #scoreboard trickery
 scoreboard objectives add playerHealth health
 scoreboard objectives setdisplay list playerHealth
-scoreboard objectives add death deathCount
+scoreboard objectives add deaths deathCount
+
+scoreboard objectives add commonDropsTimer dummy
+scoreboard objectives add uncommonDropsTimer dummy
+scoreboard objectives add rareDropsTimer dummy
+
+setblock 0 13 0 minecraft:redstone_block
 
 #notify players of game start
 title @a title ["",{"text":"Game has started","color":"dark_red"}]

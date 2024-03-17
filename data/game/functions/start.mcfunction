@@ -1,4 +1,6 @@
 gamemode adventure @a
+effect give @a minecraft:saturation 1 255
+effect give @a minecraft:regeneration 1 255
 
 #initialize teams
 team add redTeam "Red Team"
@@ -57,14 +59,49 @@ clear @a
 effect give @a minecraft:slow_falling infinite 1
 effect give @a minecraft:jump_boost infinite 3
 
-item replace entity @a[team=redTeam] armor.head with minecraft:leather_helmet{display:{color:16711680},Unbreakable:1}
-item replace entity @a[team=greenTeam] armor.head with minecraft:leather_helmet{display:{color:65280},Unbreakable:1}
-item replace entity @a[team=blueTeam] armor.head with minecraft:leather_helmet{display:{color:255},Unbreakable:1}
-item replace entity @a[team=yellowTeam] armor.head with minecraft:leather_helmet{display:{color:65535},Unbreakable:1}
+#fill up red variable chest and update red team
+item replace block 0 10 -2 container.0 from block 0 9 -2 container.0
+item replace block 0 10 -2 container.1 from block 0 9 -2 container.1
+item replace block 0 10 -2 container.2 from block 0 9 -2 container.2
+item replace block 0 10 -2 container.3 from block 0 9 -2 container.3
+item replace block 0 10 -2 container.4 from block 0 9 -2 container.4
+item replace block 0 10 -2 container.5 from block 0 9 -2 container.5
+item replace block 0 10 -2 container.6 from block 0 9 -2 container.6
+item replace block 0 10 -2 container.7 from block 0 9 -2 container.7
+function game:updates/updateredteam
 
-item replace entity @a armor.chest with minecraft:chainmail_chestplate{Unbreakable:1}
-item replace entity @a armor.legs with minecraft:chainmail_leggings{Unbreakable:1}
-item replace entity @a armor.feet with minecraft:chainmail_boots{Unbreakable:1}
+#fill up green variable chest and update green team
+item replace block 2 10 0 container.0 from block 2 9 0 container.0
+item replace block 2 10 0 container.1 from block 2 9 0 container.1
+item replace block 2 10 0 container.2 from block 2 9 0 container.2
+item replace block 2 10 0 container.3 from block 2 9 0 container.3
+item replace block 2 10 0 container.4 from block 2 9 0 container.4
+item replace block 2 10 0 container.5 from block 2 9 0 container.5
+item replace block 2 10 0 container.6 from block 2 9 0 container.6
+item replace block 2 10 0 container.7 from block 2 9 0 container.7
+function game:updates/updategreenteam
+
+#fill up blue variable chest and update blue team
+item replace block 0 10 2 container.0 from block 0 9 2 container.0
+item replace block 0 10 2 container.1 from block 0 9 2 container.1
+item replace block 0 10 2 container.2 from block 0 9 2 container.2
+item replace block 0 10 2 container.3 from block 0 9 2 container.3
+item replace block 0 10 2 container.4 from block 0 9 2 container.4
+item replace block 0 10 2 container.5 from block 0 9 2 container.5
+item replace block 0 10 2 container.6 from block 0 9 2 container.6
+item replace block 0 10 2 container.7 from block 0 9 2 container.7
+function game:updates/updateblueteam
+
+#fill up yellow variable chest and update yellow team
+item replace block -2 10 0 container.0 from block -2 9 0 container.0
+item replace block -2 10 0 container.1 from block -2 9 0 container.1
+item replace block -2 10 0 container.2 from block -2 9 0 container.2
+item replace block -2 10 0 container.3 from block -2 9 0 container.3
+item replace block -2 10 0 container.4 from block -2 9 0 container.4
+item replace block -2 10 0 container.5 from block -2 9 0 container.5
+item replace block -2 10 0 container.6 from block -2 9 0 container.6
+item replace block -2 10 0 container.7 from block -2 9 0 container.7
+function game:updates/updateyellowteam
 
 #scoreboard trickery
 scoreboard objectives add playerHealth health

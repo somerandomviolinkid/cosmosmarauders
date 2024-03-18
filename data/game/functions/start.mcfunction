@@ -60,39 +60,6 @@ clear @a
 effect give @a minecraft:slow_falling infinite 1
 effect give @a minecraft:jump_boost infinite 3
 
-#fill up green variable chest and update green team
-item replace block 2 10 0 container.0 from block 2 9 0 container.0
-item replace block 2 10 0 container.1 from block 2 9 0 container.1
-item replace block 2 10 0 container.2 from block 2 9 0 container.2
-item replace block 2 10 0 container.3 from block 2 9 0 container.3
-item replace block 2 10 0 container.4 from block 2 9 0 container.4
-item replace block 2 10 0 container.5 from block 2 9 0 container.5
-item replace block 2 10 0 container.6 from block 2 9 0 container.6
-item replace block 2 10 0 container.7 from block 2 9 0 container.7
-function game:updates/updategreenteam
-
-#fill up blue variable chest and update blue team
-item replace block 0 10 2 container.0 from block 0 9 2 container.0
-item replace block 0 10 2 container.1 from block 0 9 2 container.1
-item replace block 0 10 2 container.2 from block 0 9 2 container.2
-item replace block 0 10 2 container.3 from block 0 9 2 container.3
-item replace block 0 10 2 container.4 from block 0 9 2 container.4
-item replace block 0 10 2 container.5 from block 0 9 2 container.5
-item replace block 0 10 2 container.6 from block 0 9 2 container.6
-item replace block 0 10 2 container.7 from block 0 9 2 container.7
-function game:updates/updateblueteam
-
-#fill up yellow variable chest and update yellow team
-item replace block -2 10 0 container.0 from block -2 9 0 container.0
-item replace block -2 10 0 container.1 from block -2 9 0 container.1
-item replace block -2 10 0 container.2 from block -2 9 0 container.2
-item replace block -2 10 0 container.3 from block -2 9 0 container.3
-item replace block -2 10 0 container.4 from block -2 9 0 container.4
-item replace block -2 10 0 container.5 from block -2 9 0 container.5
-item replace block -2 10 0 container.6 from block -2 9 0 container.6
-item replace block -2 10 0 container.7 from block -2 9 0 container.7
-function game:updates/updateyellowteam
-
 #scoreboard trickery
 scoreboard objectives add playerHealth health
 scoreboard objectives setdisplay list playerHealth
@@ -106,12 +73,11 @@ scoreboard objectives add commonDropsTimer dummy
 scoreboard objectives add uncommonDropsTimer dummy
 scoreboard objectives add rareDropsTimer dummy
 
-#spawn traders
-summon villager 70 -31 -70 {VillagerData:{profession:nitwit,level:5,type:plains},Invulnerable:1,PersistenceRequired:1,Silent:1,NoAI:1,Rotation:[45f,0f],CustomName:"\"Bob\"",ActiveEffects:[{Id:10,Amplifier:1,Duration:999999,ShowParticles:0b}]}
-summon villager 70 -31 70 {VillagerData:{profession:nitwit,level:5,type:plains},Invulnerable:1,PersistenceRequired:1,Silent:1,NoAI:1,Rotation:[135f,0f],CustomName:"\"Bob\"",ActiveEffects:[{Id:10,Amplifier:1,Duration:999999,ShowParticles:0b}]}
-summon villager -70 -31 70 {VillagerData:{profession:nitwit,level:5,type:plains},Invulnerable:1,PersistenceRequired:1,Silent:1,NoAI:1,Rotation:[-135f,0f],CustomName:"\"Bob\"",ActiveEffects:[{Id:10,Amplifier:1,Duration:999999,ShowParticles:0b}]}
-
+#initialize team spawn
 function game:init/redteam
+function game:init/greenteam
+function game:init/blueteam
+function game:init/yellowteam
 setblock 0 13 0 minecraft:redstone_block
 
 #notify players of game start

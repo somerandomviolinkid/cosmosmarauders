@@ -3,6 +3,11 @@ effect give @a minecraft:saturation 1 255
 effect give @a minecraft:regeneration 1 255
 kill @e[type=item]
 
+setblock 0 15 -6 air
+setblock 6 15 0 air
+setblock 0 15 6 air
+setblock -6 15 0 air
+
 #initialize teams
 team add redTeam "Red Team"
 team modify redTeam color red

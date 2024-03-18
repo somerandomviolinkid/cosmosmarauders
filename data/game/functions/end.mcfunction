@@ -20,6 +20,13 @@ scoreboard objectives remove Kills
 scoreboard objectives remove commonDropsTimer
 scoreboard objectives remove uncommonDropsTimer
 scoreboard objectives remove rareDropsTimer
+
+#pause tick function/remove end votes
 setblock 0 13 0 air
+
+setblock 0 15 -6 air
+setblock 6 15 0 air
+setblock 0 15 6 air
+setblock -6 15 0 air
 
 title @a title ["",{"text":"Game has ended","color":"dark_red"}]

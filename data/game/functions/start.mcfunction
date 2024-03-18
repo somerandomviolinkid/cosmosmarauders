@@ -60,6 +60,19 @@ clear @a
 effect give @a minecraft:slow_falling infinite 1
 effect give @a minecraft:jump_boost infinite 3
 
+#remove player placed blocks
+fill 96 -16 96 -96 -56 -96 air replace minecraft:red_concrete
+fill 96 -16 96 -96 -56 -96 air replace minecraft:green_concrete
+fill 96 -16 96 -96 -56 -96 air replace minecraft:blue_concrete
+fill 96 -16 96 -96 -56 -96 air replace minecraft:yellow_concrete
+fill 96 -16 96 -96 -56 -96 air replace minecraft:iron_block
+
+#clear chests
+setblock -67 -32 -70 minecraft:chest[facing=south] replace
+setblock 70 -32 -67 minecraft:chest[facing=west] replace
+setblock 67 -32 70 minecraft:chest[facing=north] replace
+setblock -70 -32 67 minecraft:chest[facing=east] replace
+
 #scoreboard trickery
 scoreboard objectives add playerHealth health
 scoreboard objectives setdisplay list playerHealth

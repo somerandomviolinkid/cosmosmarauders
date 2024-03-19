@@ -1,7 +1,6 @@
 gamemode adventure @a
-effect give @a minecraft:saturation 1 255
-effect give @a minecraft:regeneration 1 255
 kill @e[type=item]
+kill @e[type=arrow]
 
 setblock 0 15 -6 air
 setblock 6 15 0 air
@@ -62,8 +61,9 @@ spawnpoint @a[team=blueTeam] 64 -31 64
 spawnpoint @a[team=yellowTeam] -64 -31 64
 
 clear @a
-effect give @a minecraft:slow_falling infinite 1
-effect give @a minecraft:jump_boost infinite 3
+effect clear @a
+effect give @a minecraft:slow_falling infinite 1 true
+effect give @a minecraft:jump_boost infinite 3 true
 
 #remove player placed blocks
 fill 96 -16 96 -96 -56 -96 air replace minecraft:red_concrete
@@ -107,3 +107,6 @@ playsound minecraft:entity.ender_dragon.growl master @a
 tellraw @a {"text":"[GALACTICOMMAND TRANSMISSION] You and your crew have been stranded in deep space after a large burst of alpha radiation struck your ship. Unfortunately, you are drifting towards a large asteroid field and if you aren't able to repair your ship in time, your ship will collide with an asteroid and you will be stranded in space forever.","color":"green"}
 tellraw @a {"text":"[GALACTICOMMAND TRANSMISSION] Fortunately, the larger asteroids have a large amount of resources that you can use to repair your ship. However, there are three other hostile enemy ships in the vicinity also trying to escape, and you will have to fight over rarer materials.","color":"green"}
 tellraw @a {"text":"[GALACTICOMMAND TRANSMISSION] In order to repair modules of your ship, you will have to collect resources and bring them back safely. Once all of the modules are repaired, you will have to obtain Ultrafuel from the large blackened asteroid and insert it into your ship's fuel cell. Ultrafuel is incredibly rare, and the environment it's found in is incredibly dangerous. Good luck spaceman, and don't get lost in space.","color":"green"}
+
+effect give @a minecraft:saturation 1 255
+effect give @a minecraft:regeneration 1 255

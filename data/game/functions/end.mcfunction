@@ -5,12 +5,13 @@ team remove blueTeam
 team remove yellowTeam
 
 #reset players
-gamemode creative @a
+gamemode adventure @a
 tp @a 0 1 0
 spawnpoint @a 0 1 0
 clear @a
 effect clear @a
 kill @e[type=item]
+kill @e[type=arrow]
 kill @e[type=villager]
 
 scoreboard objectives remove playerHealth

@@ -2,10 +2,17 @@ gamemode adventure @a
 kill @e[type=item]
 kill @e[type=arrow]
 
-setblock 0 15 -6 air
-setblock 6 15 0 air
-setblock 0 15 6 air
-setblock -6 15 0 air
+#remove all force game end votes
+setblock 0 15 -3 air
+setblock 3 15 0 air
+setblock 0 15 3 air
+setblock -3 15 0 air
+
+#reset repair things
+fill 0 24 -3 0 24 -6 redstone_block
+fill 3 24 0 6 24 0 redstone_block
+fill 0 24 3 0 24 6 redstone_block
+fill -3 24 0 -6 24 0 redstone_block
 
 #initialize teams
 team add redTeam "Red Team"
@@ -31,8 +38,8 @@ team modify yellowTeam friendlyFire false
 #propogate teams
 team join redTeam @r[team=]
 team join greenTeam @r[team=]
-team join yellowTeam @r[team=]
 team join blueTeam @r[team=]
+team join yellowTeam @r[team=]
 
 team join redTeam @r[team=]
 team join greenTeam @r[team=]

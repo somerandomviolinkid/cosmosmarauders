@@ -29,5 +29,3 @@ setblock 0 15 -6 air
 setblock 6 15 0 air
 setblock 0 15 6 air
 setblock -6 15 0 air
-
-title @a title ["",{"text":"Game has ended","color":"dark_red"}]

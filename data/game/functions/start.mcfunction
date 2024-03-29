@@ -14,6 +14,15 @@ fill 3 24 0 6 24 0 redstone_block
 fill 0 24 3 0 24 6 redstone_block
 fill -3 24 0 -6 24 0 redstone_block
 
+setblock 0 25 -2 air
+setblock -1 25 -2 air
+setblock 2 25 0 air
+setblock 2 25 -1 air
+setblock 0 25 2 air
+setblock 1 25 2 air
+setblock -2 25 0 air
+setblock -2 25 1 air
+
 #initialize teams
 team add redTeam "Red Team"
 team modify redTeam color red
@@ -69,8 +78,6 @@ spawnpoint @a[team=yellowTeam] -64 -31 64
 
 clear @a
 effect clear @a
-effect give @a minecraft:slow_falling infinite 1 true
-effect give @a minecraft:jump_boost infinite 3 true
 
 #remove player placed blocks
 fill 96 -16 96 -96 -56 -96 air replace minecraft:red_concrete
@@ -104,12 +111,13 @@ function game:init/greenteam
 function game:init/blueteam
 function game:init/yellowteam
 setblock 0 13 0 minecraft:redstone_block
+setblock 0 29 0 minecraft:redstone_block
 
 #notify players of game start
 title @a times 10 80 10
 title @a title ["",{"text":"Started Game","color":"red"}]
 title @a subtitle ["",{"text":"Good luck, you'll need it.","color":"dark_red"}]
-playsound minecraft:entity.ender_dragon.growl master @a
+execute at @a run playsound entity.wither.death master @a
 
 tellraw @a {"text":"[GALACTICOMMAND TRANSMISSION] You and your crew have been stranded in deep space after a large burst of alpha radiation struck your ship. Unfortunately, you are drifting towards a large asteroid field and if you aren't able to repair your ship in time, your ship will collide with an asteroid and you will be stranded in space forever.","color":"green"}
 tellraw @a {"text":"[GALACTICOMMAND TRANSMISSION] Fortunately, the larger asteroids have a large amount of resources that you can use to repair your ship. However, there are three other hostile enemy ships in the vicinity also trying to escape, and you will have to fight over rarer materials.","color":"green"}
@@ -117,3 +125,6 @@ tellraw @a {"text":"[GALACTICOMMAND TRANSMISSION] In order to repair modules of 
 
 effect give @a minecraft:saturation 1 255
 effect give @a minecraft:regeneration 1 255
+
+execute as @a run attribute @s generic.max_health base set 20
+function game:respawn

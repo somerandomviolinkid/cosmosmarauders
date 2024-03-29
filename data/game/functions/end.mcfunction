@@ -24,6 +24,7 @@ scoreboard objectives remove rareDropsTimer
 
 #pause tick function/remove end votes
 setblock 0 13 0 air
+setblock 0 29 0 air
 
 setblock 0 15 -6 air
 setblock 6 15 0 air

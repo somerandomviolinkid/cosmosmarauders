@@ -6,3 +6,4 @@ data merge block -81 -28 -59 {Command:"execute if blocks -1 19 -3 -1 19 -3 ~ ~-3
 data merge block -81 -27 -59 {Command:"function game:upgrades/redteam/shipdefenses3"}
 
 tellraw @a[team=redTeam] {"text":"Your ship defenses have been upgraded to level 2. Please die to gain permanent diamond armor."}
+execute at @a[team=redTeam] run playsound block.anvil.place master @a[team=redTeam]

@@ -5,3 +5,5 @@ data merge block 81 -28 69 {Command:"execute if blocks 0 19 4 0 19 4 ~ ~-3 ~ all
 data merge block 81 -27 69 {Command:"function game:upgrades/blueteam/engine2"}
 
 tellraw @a[team=blueTeam] {"text":"Your ship engine has been upgraded to level 1. Please die to gain permanent better attack damage."}
+setblock 0 24 4 air
+execute at @a[team=blueTeam] run playsound block.anvil.place master @a[team=blueTeam]

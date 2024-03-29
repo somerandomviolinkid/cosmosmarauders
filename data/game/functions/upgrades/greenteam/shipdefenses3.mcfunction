@@ -2,7 +2,8 @@ item replace block 2 10 0 container.1 with diamond_chestplate{display:{Name:'[""
 item replace block 2 10 0 container.2 with diamond_leggings{display:{Name:'["",{"text":"Space Pants","italic":false}]'},Enchantments:[{lvl:1,id:vanishing_curse},{lvl:1,id:binding_curse}],Unbreakable:1}
 
 data merge block 62 -33 -81 {Command:"tellraw @p {\"text\":\"go to another upgrade brit\"}"}
-data merge block 59 -28 -81 {Command:"say @p is stupid"}
+data merge block 59 -28 -81 {Command:"tellraw @a [{\"color\":\"none\",\"selector\":\"@p\"},{\"color\":\"none\",\"text\":\" is stupid\",\"bold\":false}]"}
 data merge block 59 -27 -81 {Command:""}
 
 tellraw @a[team=greenTeam] {"text":"Your ship defenses have been upgraded to level 3. Please die to gain permanent protection 1 diamond armor."}
+execute at @a[team=greenTeam] run playsound block.anvil.place master @a[team=greenTeam]

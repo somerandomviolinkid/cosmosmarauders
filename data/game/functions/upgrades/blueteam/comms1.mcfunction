@@ -5,3 +5,5 @@ data merge block 69 -28 81 {Command:"execute if blocks 0 19 5 0 19 5 ~ ~-3 ~ all
 data merge block 69 -27 81 {Command:"function game:upgrades/blueteam/comms2"}
 
 tellraw @a[team=blueTeam] {"text":"Your ship comms have been upgraded to level 1. Please die to gain permament bow damage."}
+setblock 0 24 5 air
+execute at @a[team=blueTeam] run playsound block.anvil.place master @a[team=blueTeam]

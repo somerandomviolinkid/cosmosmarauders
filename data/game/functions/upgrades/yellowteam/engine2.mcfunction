@@ -5,3 +5,4 @@ data merge block -69 -28 81 {Command:"execute if blocks -4 19 1 -4 19 1 ~ ~-3 ~ 
 data merge block -69 -27 81 {Command:"function game:upgrades/yellowteam/engine3"}
 
 tellraw @a[team=yellowTeam] {"text":"Your ship engine has been upgraded to level 2. Please die to gain permanent melee knockback."}
+execute at @a[team=yellowTeam] run playsound block.anvil.place master @a[team=yellowTeam]

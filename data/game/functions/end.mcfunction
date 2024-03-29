@@ -30,3 +30,5 @@ setblock 0 15 -6 air
 setblock 6 15 0 air
 setblock 0 15 6 air
 setblock -6 15 0 air
+
+execute at @a run playsound ui.toast.challenge_complete master @a

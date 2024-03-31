@@ -5,4 +5,5 @@ data merge block 69 -28 -81 {Command:"tellraw @a [{\"color\":\"none\",\"selector
 data merge block 69 -27 -81 {Command:""}
 
 tellraw @a[team=greenTeam] {"text":"Your ship engine has been upgraded to level 3. Please die to gain even more permanent melee damage."}
+setblock 69 -31 -81 hopper replace
 execute at @a[team=greenTeam] run playsound block.anvil.place master @a[team=greenTeam]

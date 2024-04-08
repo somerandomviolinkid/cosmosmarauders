@@ -7,6 +7,7 @@ setblock 0 15 -3 air
 setblock 3 15 0 air
 setblock 0 15 3 air
 setblock -3 15 0 air
+setblock 0 20 0 bedrock
 
 #reset repair things
 fill 0 24 -3 0 24 -6 redstone_block
@@ -105,6 +106,8 @@ scoreboard objectives add commonDropsTimer dummy
 scoreboard objectives add uncommonDropsTimer dummy
 scoreboard objectives add rareDropsTimer dummy
 
+scoreboard objectives add bow used:bow
+
 #initialize team spawn
 function game:init/redteam
 function game:init/greenteam
@@ -128,3 +131,5 @@ effect give @a minecraft:regeneration 1 255
 
 execute as @a run attribute @s generic.max_health base set 20
 function game:respawn
+
+recipe take @a *

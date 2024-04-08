@@ -5,5 +5,4 @@ item replace entity @a[team=blueTeam] armor.feet from block 0 10 2 container.3
 
 item replace entity @a[team=blueTeam] container.0 from block 0 10 2 container.4
 item replace entity @a[team=blueTeam] container.1 from block 0 10 2 container.5
-item replace entity @a[team=blueTeam] container.8 from block 0 10 2 container.7
-item replace entity @a[team=blueTeam] container.17 from block 0 10 2 container.6
+item replace entity @a[team=blueTeam] container.8 from block 0 10 2 container.6

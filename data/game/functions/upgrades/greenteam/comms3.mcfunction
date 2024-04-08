@@ -1,4 +1,4 @@
-item replace block 2 10 0 container.5 with bow{Unbreakable:1,display:{Name:'[{"text":"Laser Gun","italic":false}]'},Enchantments:[{id:vanishing_curse,lvl:1},{id:infinity,lvl:1},{id:power,lvl:2},{id:punch,lvl:1}]}
+item replace block 2 10 0 container.5 with bow{Unbreakable:1,display:{Name:'[{"text":"Energy Slingshot","italic":false}]'},Enchantments:[{id:vanishing_curse,lvl:1},{id:power,lvl:2},{id:punch,lvl:1}],HideFlags:1}
 
 data merge block 81 -33 -66 {Command:"tellraw @p {\"text\":\"go to another upgrade brit\"}"}
 data merge block 81 -28 -69 {Command:"tellraw @a [{\"color\":\"none\",\"selector\":\"@p\"},{\"color\":\"none\",\"text\":\" is stupid\",\"bold\":false}]"}

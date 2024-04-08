@@ -11,7 +11,6 @@ spawnpoint @a 0 1 0
 clear @a
 effect clear @a
 kill @e[type=item]
-kill @e[type=arrow]
 kill @e[type=villager]
 
 scoreboard objectives remove playerHealth
@@ -22,8 +21,11 @@ scoreboard objectives remove commonDropsTimer
 scoreboard objectives remove uncommonDropsTimer
 scoreboard objectives remove rareDropsTimer
 
+scoreboard objectives remove bow
+
 #pause tick function/remove end votes
 setblock 0 13 0 air
+setblock 0 20 0 air
 setblock 0 29 0 air
 
 setblock 0 15 -6 air

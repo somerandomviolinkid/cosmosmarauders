@@ -1,4 +1,4 @@
-item replace block -2 10 0 container.5 with bow{Unbreakable:1,display:{Name:'[{"text":"Laser Gun","italic":false}]'},Enchantments:[{id:vanishing_curse,lvl:1},{id:infinity,lvl:1},{id:power,lvl:1},{id:punch,lvl:1}]}
+item replace block -2 10 0 container.5 with bow{Unbreakable:1,display:{Name:'[{"text":"Energy Slingshot","italic":false}]'},Enchantments:[{id:vanishing_curse,lvl:1},{id:power,lvl:1},{id:punch,lvl:1}],HideFlags:1}
 
 data merge block -81 -33 66 {Command:"tellraw @p {\"text\":\"10 Industrial Acid, 5 Crystal, 2 Electrical Circuit. IN THAT ORDER!\"}"}
 data merge block -81 -28 69 {Command:"execute if blocks -5 19 1 -5 19 1 ~ ~-3 ~ all"}
